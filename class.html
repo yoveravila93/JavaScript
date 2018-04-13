@@ -1,1 +1,38 @@
-p
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+</head>
+<body>
+    <section class="animes"></section>
+    <script>
+     (function(){
+         'use strict';
+         class anime{
+
+            constructor(tittle, info, year, poster){
+
+                this.tittle = tittle;
+                this.info = info;
+                this.year = year;
+                this.poster = poster;
+
+            }
+            getInfo(){
+
+                return '<article><h2>'+ this.tittle +'</h2><p>'+ this.info +'</p><p>'+ this.year +'</p><img src="' + this.poster + '">  </article>';
+
+            }
+
+         }
+
+         var animeid = new anime('One Piece','Una historia épica de piratas, donde narra la historia de "Monkey D. Luffy" quien cuando tenia 7 años, comió accidentalmente una "Akuma no mi"(Fruta del diablo) la cual le convirtió en un hombre de goma. Por otra parte "Gol D. Roger" conocido como "El rey de los Piratas" quien fuera ejecutado por la Marine, habló antes de morir, acerca de su mayor tesoro,el "One Piece" escondido en la "Gran line". Esta noticia desató la gran era de los piratas lanzando a incontables piratas a ese lugar, en busca del "One Piece" el tesoro perdido. Diez años después, Luffy inspirado en "Gol D. Roger" y un pirata de nombre Akagami no Shanks (Shanks el pelirrojo) se convierte en pirata deseando ser el próximo "Rey de los Piratas" y zarpar para conocer amigos y tener aventuras con ellos, teniendo como meta encontrar el "One Piece".','1998','http://cdn.jkanime.net/assets/images/animes/image/one-piece.jpg')
+         console.log(animeid);
+         document.querySelector('.animes').innerHTML = animeid.getInfo();
+     }());
+    </script>
+
+</body>
+</html>
