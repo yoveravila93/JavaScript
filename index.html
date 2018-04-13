@@ -12,18 +12,38 @@
     <input type="button" name="" id="" onclick="Fcambiar()" value="CAMBIAR">
     <script>
         function Fcambiar(){
-          document.getElementById("h1").innerHTML = "jajaja te cambie";
-          document.getElementById("h1").style.color = "red";
+          document.getElementById("h1").innerHTML = "Manejo de fuctions con JavaScript";
+          document.getElementById("h1").style.color = "crimson";
           document.getElementById("h").style.display = "block";
-          document.getElementById("h").style.color = "crimson";
+          document.getElementById("h").style.color = "blue";
           console.log("GOOD");
-          document.getElementById("1").style.display = "none"; 
-          document.getElementsByTagName("h1")[1].style.backgroundColor = "black"; 
-          document.getElementsByTagName("h1")[1].style.border = ("10 px");
-          document.getElementsByTagName("h1")[1].style.padding = ("10 px");       
-    }
+          document.getElementById("1").style.display = "none";
+          document.getElementsByTagName("h1")[1].style.textAlign = "center";     
+          console.log("WE GO GOOD :)")
+          document.getElementsByTagName("h1")[2].style.textAlign = "center";
+          document.getElementsByTagName("h1")[1].style.border = "solid";
+          document.getElementsByTagName("h1")[1].style.border = "";
+    }                              
+    </script>
+    <script>
+    class Poligono {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  
+  get area() {
+    return this.calcArea();
+  }
 
-                                   
+  calcArea() {
+    return this.height * this.width;
+  }
+}
+
+const cuadrado = new Poligono(10, 10);
+
+console.log(cuadrado.area);
     </script>
     
     
